@@ -1,0 +1,2 @@
+# Roseti
+Roseti is a Lean4 external kernel written in OCaml. The main motivation for this project is (1) writen an external kernel for Lean4, which increases trust in the collective of implemented kernels and (2) write a performant kernel which can remove typechecking bottlenecks for large proof libraries such as Mathlib. 

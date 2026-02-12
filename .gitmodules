@@ -1,0 +1,3 @@
+[submodule "lean4export"]
+	path = lean4export
+	url = git@github.com:leanprover/lean4export.git
