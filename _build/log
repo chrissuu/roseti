@@ -1,6 +1,0 @@
-# dune init project roseti
-# OCAMLPARAM: unset
-# Shared cache: enabled-except-user-rules
-# Shared cache location: /Users/chrissu/.cache/dune/db
-# Workspace root: /Users/chrissu/dev/roseti
-# Auto-detected concurrency: 8
