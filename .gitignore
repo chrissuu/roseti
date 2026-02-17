@@ -1,0 +1,41 @@
+# Dune / OCaml build artifacts
+_build/
+*.install
+*.cm[iox]
+*.cmxa
+*.cma
+*.a
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+*.bc
+
+# OCaml tooling
+.merlin
+.ocamlformat
+*.annot
+
+# Package manager / local switches
+_opam/
+
+# Test/coverage artifacts
+*.coverage
+bisect*.out
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

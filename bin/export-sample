@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+LEAN4EXPORT_DIR="$ROOT/lean4export"
+OUT_FILE="$LEAN4EXPORT_DIR/examples/Sample.ndjson"
+
+decls=("$@")
+if [ ${#decls[@]} -eq 0 ]; then
+  decls=("x")
+fi
+
+cd "$LEAN4EXPORT_DIR"
+lake build lean4export
+lake env lean -o .lake/build/lib/lean/Sample.olean Sample.lean
+lake env .lake/build/bin/lean4export Sample -- "${decls[@]}" > "$OUT_FILE"
+
+echo "Wrote $OUT_FILE"
+wc -l "$OUT_FILE"
